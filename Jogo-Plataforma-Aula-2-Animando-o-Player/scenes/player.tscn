@@ -87,5 +87,4 @@ shape = SubResource("RectangleShape2D_g2els")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2066676052]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_f1ej7")
-animation = &"jump"
-frame_progress = 0.11713303
+animation = &"idle"
