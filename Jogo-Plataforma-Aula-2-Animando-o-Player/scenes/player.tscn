@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://pu7v05d0v1ic" path="res://assets/Base pack/Player/p1_walk/PNG/p1_walk11.png" id="14_ujl30"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(85, 95)
+size = Vector2(45, 100.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f1ej7"]
 animations = [{
@@ -81,7 +81,7 @@ script = ExtResource("1_g2els")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=292255029]
-position = Vector2(5.5, -6)
+position = Vector2(1.5, -3.25)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2066676052]
