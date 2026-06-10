@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dy766osd87sp7"]
+
+[ext_resource type="Texture2D" uid="uid://ck3j86u6yq64p" path="res://assets/Base pack/Tiles/ropeVertical.png" id="1_3c67o"]
+[ext_resource type="Script" uid="uid://rd3rd3xsf3i7" path="res://scenes/escada.gd" id="1_05wju"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05wju"]
+size = Vector2(5, 339)
+
+[node name="Escada" type="Area2D" unique_id=2065109847]
+script = ExtResource("1_05wju")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1618374135]
+position = Vector2(0, -134.5)
+scale = Vector2(1, 4.8428574)
+texture = ExtResource("1_3c67o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=799274608]
+position = Vector2(0.5, -134.5)
+shape = SubResource("RectangleShape2D_05wju")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

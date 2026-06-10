@@ -75,7 +75,7 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=1617664681]
+[node name="Player" type="CharacterBody2D" unique_id=1617664681 groups=["jogador"]]
 position = Vector2(557, 294)
 script = ExtResource("1_g2els")
 metadata/_edit_group_ = true
