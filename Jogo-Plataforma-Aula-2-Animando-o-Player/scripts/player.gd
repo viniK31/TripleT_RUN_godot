@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 375.0
 const JUMP_VELOCITY = -800.0
 @export var VELOCIDADE_SUBIDA = 200.0 # Velocidade para subir/descer a escada
 
