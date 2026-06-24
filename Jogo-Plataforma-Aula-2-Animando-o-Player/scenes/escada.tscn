@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://dy766osd87sp7"]
 
 [ext_resource type="Texture2D" uid="uid://ck3j86u6yq64p" path="res://assets/Base pack/Tiles/ropeVertical.png" id="1_3c67o"]
-[ext_resource type="Script" uid="uid://rd3rd3xsf3i7" path="res://scenes/escada.gd" id="1_05wju"]
+[ext_resource type="Script" uid="uid://rd3rd3xsf3i7" path="res://scripts/escada.gd" id="1_05wju"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05wju"]
 size = Vector2(5, 346)

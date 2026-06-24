@@ -71,3 +71,15 @@ func entra_na_escada() -> void:
 func sai_da_escada() -> void:
 	na_escada = false
 	velocity.y = 0 # Evita que ele caia rápido demais ao sair
+
+# Arquivo: player.gd
+
+#... restante do código
+
+func die():
+	# get_tree() — acessa o SceneTree, que é o gerenciador geral do jogo. 
+	# É por ele que você controla cenas, pausa o jogo, fecha o jogo, etc.
+	
+	# .reload_current_scene() — reinicia a cena atual do zero, como se 
+	# você tivesse fechado e reaberto ela.
+	get_tree().reload_current_scene()

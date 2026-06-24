@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://5xlx45ef2wr7"]
+
+[ext_resource type="Script" uid="uid://d3tv8kwd6cctk" path="res://scripts/enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://cph0lv6yrnuuv" path="res://assets/tung/enemy_tralalero_walk(1) (1).png" id="1_7k104"]
+[ext_resource type="PackedScene" uid="uid://boft7xx7gbgay" path="res://scenes/killzone.tscn" id="3_4ra3w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gyqm"]
+atlas = ExtResource("1_7k104")
+region = Rect2(0, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi2p4"]
+atlas = ExtResource("1_7k104")
+region = Rect2(1024, 0, 1024, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iifgy"]
+atlas = ExtResource("1_7k104")
+region = Rect2(0, 1024, 1024, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_epg4t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gyqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi2p4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iifgy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yqyl"]
+size = Vector2(991, 740)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uy6h"]
+size = Vector2(1040.0005, 790.0004)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=450402630]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_4gyqm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1863147288]
+position = Vector2(-336, -55)
+sprite_frames = SubResource("SpriteFrames_epg4t")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97675372]
+position = Vector2(-351.5, 92)
+shape = SubResource("RectangleShape2D_3yqyl")
+
+[node name="FloorLeft" type="RayCast2D" parent="." unique_id=735525865]
+unique_name_in_owner = true
+target_position = Vector2(-649.99994, 459.99997)
+
+[node name="FloorRight" type="RayCast2D" parent="." unique_id=825449123]
+unique_name_in_owner = true
+target_position = Vector2(99.99999, 419.99997)
+
+[node name="killzone" parent="." unique_id=858146708 instance=ExtResource("3_4ra3w")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=24627697]
+position = Vector2(-349.99994, 94.99999)
+scale = Vector2(0.99999934, 0.99999934)
+shape = SubResource("RectangleShape2D_5uy6h")
