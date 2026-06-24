@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cb12t8a2cwimf"]
+
+[ext_resource type="Script" uid="uid://dmnao7l1pfmkq" path="res://area_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://dctgmp231guop" path="res://assets/tung/coin.png" id="2_epypp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hol4"]
+atlas = ExtResource("2_epypp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6r6c"]
+atlas = ExtResource("2_epypp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
+atlas = ExtResource("2_epypp")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d21ai"]
+atlas = ExtResource("2_epypp")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj586"]
+atlas = ExtResource("2_epypp")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4d7sh"]
+atlas = ExtResource("2_epypp")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ir8iy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hol4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6r6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdubu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d21ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj586")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4d7sh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hqns4"]
+radius = 6.0
+height = 14.0
+
+[node name="Node2D" type="Node2D" unique_id=1698776384]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=954200426]
+script = ExtResource("1_0e48y")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D" unique_id=395383715]
+position = Vector2(12, -14)
+sprite_frames = SubResource("SpriteFrames_ir8iy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=4897222]
+position = Vector2(11, -16)
+shape = SubResource("CapsuleShape2D_hqns4")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Area2D" unique_id=1644894264]
