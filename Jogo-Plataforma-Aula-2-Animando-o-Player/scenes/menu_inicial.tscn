@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://2djcgwvx6pss"]
+
+[ext_resource type="Script" uid="uid://naps0lc5ir2r" path="res://menu_inicial.gd" id="1_eg8ak"]
+[ext_resource type="Texture2D" uid="uid://dashmu5yu5dls" path="res://assets/tung/pixilart-drawing.png" id="2_nn1uv"]
+[ext_resource type="FontFile" uid="uid://ckmcnjso2tv40" path="res://assets/tung/PixelifySans-Regular.ttf" id="3_twj80"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0tvy4"]
+font = ExtResource("3_twj80")
+font_size = 90
+font_color = Color(0.8, 0.63529414, 0.43137255, 1)
+outline_size = 8
+outline_color = Color(1, 1, 0.44705883, 1)
+
+[node name="MenuInicial" type="Control" unique_id=748862069]
+layout_mode = 3
+anchor_left = 0.46
+anchor_top = -0.216
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -423.91998
+offset_top = 94.968
+offset_right = 106.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eg8ak")
+
+[node name="GameBackground" type="TextureRect" parent="." unique_id=782188682]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0859375
+anchor_top = -0.4537037
+anchor_right = 0.8706597
+anchor_bottom = 1.1265432
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nn1uv")
+metadata/_edit_use_anchors_ = true
+
+[node name="TituloJogoLabel" type="Label" parent="." unique_id=1634251066]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.035
+offset_left = 185.0
+offset_top = -157.0
+offset_right = 728.0
+offset_bottom = -70.68
+text = "TRIPLE T RUN"
+label_settings = SubResource("LabelSettings_0tvy4")
+
+[node name="JogarButton" type="Button" parent="." unique_id=360009741]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 124.0
+offset_right = 439.0
+offset_bottom = 155.0
+theme_override_fonts/font = ExtResource("3_twj80")
+theme_override_font_sizes/font_size = 51
+text = "PLAY"
+
+[connection signal="pressed" from="JogarButton" to="." method="_on_jogar_button_pressed"]

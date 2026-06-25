@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cmokehlft5juy" path="res://ChatGPT Image Jun 10, 2026, 06_54_07 PM.png" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://5xlx45ef2wr7" path="res://scenes/enemy.tscn" id="5_4nkto"]
 [ext_resource type="PackedScene" uid="uid://boft7xx7gbgay" path="res://scenes/killzone.tscn" id="6_fcfvj"]
+[ext_resource type="PackedScene" uid="uid://bwva4ijlxdo1n" path="res://scenes/hud.tscn" id="7_pa8r4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ihfcg"]
 texture = ExtResource("2_bswci")
@@ -2913,7 +2914,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ihfcg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pa8r4"]
-size = Vector2(8206, 553)
+size = Vector2(8613, 553)
 
 [node name="Level1" type="Node2D" unique_id=889481777]
 
@@ -2938,8 +2939,19 @@ texture = ExtResource("4_5xbjy")
 [node name="Enemy" parent="." unique_id=450402630 instance=ExtResource("5_4nkto")]
 position = Vector2(4880, 374)
 
+[node name="Enemy2" parent="." unique_id=1703636717 instance=ExtResource("5_4nkto")]
+position = Vector2(1056, 231)
+
+[node name="Enemy3" parent="." unique_id=1334379000 instance=ExtResource("5_4nkto")]
+position = Vector2(1604, 372)
+
+[node name="Enemy4" parent="." unique_id=608473016 instance=ExtResource("5_4nkto")]
+position = Vector2(3379, 728)
+
 [node name="killzone" parent="." unique_id=858146708 instance=ExtResource("6_fcfvj")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1296681977]
-position = Vector2(4026, 1332.5)
+position = Vector2(3822.5, 1332.5)
 shape = SubResource("RectangleShape2D_pa8r4")
+
+[node name="HUD" parent="." unique_id=1477457466 instance=ExtResource("7_pa8r4")]
